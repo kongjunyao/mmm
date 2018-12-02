@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="back"><a href="javascript:history.go(-1);"> < </a></div>
+        <span>白菜价-淘宝内部优惠券</span>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+      <!--搜索区域-->
+
+
+    <div class="ul_wrap">
+        <div class="ul_box">
+            <ul class="li_list">
+                <!-- 挖个坑 -->
+                <!--<li><a href="">热销</a></li>-->
+            </ul>
+        </div>
+</div>
+
+    <div class="pro_list">
+        <ul class="pro_ul">
+            <!-- 挖个坑 -->
+            <!--<li class="clearfix">-->
+                <!--<a class="meng" href="#"></a>-->
+                <!--<div class="left  img_box">-->
+                    <!--<img src="./images/ic_pp.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                    <!--<div class="txt1 txt-cut">-->
+                        <!--羽绒服-->
+                    <!--</div>-->
+                    <!--<p class="txt2">-->
+                        <!--999-->
+                    <!--</p>-->
+                    <!--已领1989张-->
+                    <!--<div class="bot clearfix">-->
+                        <!--{{#v.productCoupon}} {{#v.productHref}}-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+    <div class="bottom">
+        <div class="top">
+            <ul>
+                <li style="width: 30%">登录</li>
+                <li style="width: 30%">注册</li>
+                <li style="width: 40%" class="to_top">返回顶部</li>
+            </ul>
+        </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script type="text/html" id="tpl">
+    {{each list as v i}}
+    <li data-id="{{v.titleId}}" class="{{i === 0 ? ' now ' : ' '}}">
+    <a href="javascript:;">{{v.title}}</a>
+    </li>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="tpl2">
+    {{each list as v i}}
+    <li class="clearfix">
+        <a class="meng" href="#"></a>
+        <div class="left fl img_box">
+            {{#v.productImg}}
+        </div>
+        <div class="right">
+            <div class="txt1 txt-cut">
+                {{#v.productName}}
+            </div>
+            <p class="txt2">
+                {{#v.productPrice}}
+            </p>
+            {{#v.productCouponRemain}}
+            <div class="bot clearfix">
+                {{#v.productCoupon}} {{#v.productHref}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/baicaijia.js"></script>
+<script src="./js/common/iscroll.js"></script>
+</body>
+</html>

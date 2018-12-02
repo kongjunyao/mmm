@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/discount.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="back"><a href="javascript:history.go(-1);"> < </a></div>
+        <span>国内折扣</span>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="list_main">
+        <div class="render">
+            <!--挖个坑-->
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="bottom">
+    <div class="top">
+        <ul>
+            <li style="width: 30%">登录</li>
+            <li style="width: 30%">注册</li>
+            <li style="width: 40%" class="to_top">返回顶部</li>
+        </ul>
+    </div>
+    <div class="down">
+        <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+    </div>
+
+</div>
+</div>
+
+
+<script type="text/html" id="tpl">
+    <div class="title">{{result[0].productName}}</div>
+    <h4>{{result[0].productPrice}}</h4>
+    <div class="render_info">
+        <span class="one">{{result[0].productFrom}}</span>
+        <span class="two">{{result[0].productTime}}</span>
+        <span class="three">{{result[0].productTips}}</span>
+    </div>
+    <div class="con clearfix">
+        <div class="right">
+            <img src="./images/xx.jpg" alt="">
+        </div>
+        <p class="p1"></p>
+        <p class="p3">
+            {{#result[0].productImg}}
+        </p>
+    </div>
+    <div class="wrap">
+        {{#result[0].productCity}}
+    </div>
+    <div class="gobuy">前往购买</div>
+    <div class="img_box">
+        <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    <!-- ================ -->
+    <div class="comArea">
+        {{#result[0].productComment}}
+    </div>
+
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/discount.js"></script>
+</body>
+</html>

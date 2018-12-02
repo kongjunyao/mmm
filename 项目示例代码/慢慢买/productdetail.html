@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/productdetail.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="header_logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--搜索区域-->
+    <section>
+        <form action="" class="search">
+            <input type="search" placeholder="请输入你想比价的产品" class="">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+
+
+    <section>
+        <div class="nav">
+            <div class="nav_left fl">
+                <!-- 挖个坑 -->
+            </div>
+            <div class="right fr">
+                <button>筛选</button>
+            </div>
+        </div>
+
+
+
+        <div class="content">
+            <!--挖个坑-->
+             <div class="imgbox">
+
+             </div>
+            <div class="tab">
+                <ul>
+                    <li class="color" style="width:33.33%"><a href="">比较购买</a></li>
+                    <li style="width:33.33%"><a href="">产品参数</a></li>
+                    <li style="width:33.33%"><a href="">评价（999+）</a></li>
+                </ul>
+            </div>
+            <div class="tips">
+                <ul>
+                    <li class="img" style="width: 10%"><a href=""><img src="./images/slogo.png" alt=""></a></li>
+                    <li style="width: 20%"><a href="">京东商城</a></li>
+                    <li id="red" style="width: 50%"><a href="" style="color: red">￥1999</a></li>
+                    <li style="width: 20%"><a href="" class="buy">去购买</a></li>
+                </ul>
+            </div>
+            <div  class="notes">
+                <p>实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+            </div>
+
+            <div class="com">
+                <p class="top">网友评价</p>
+                <ul class="user_com">
+                    <!-- 挖个坑 -->
+                    <!--<li class="clearfix">-->
+                        <!--<p class="clearfix">-->
+                            <!--<span class="fl left">gn****</span>-->
+                            <!--<span class="fr right">2018.10.10</span>-->
+                        <!--<p class="buybuy">京东</p>-->
+                        <!--</p>-->
+                        <!--<p class="info">。。。。。。。。。。。。。。。。。。。。。。</p>-->
+                    <!--</li>-->
+                </ul>
+                <div class="btn_box">
+                    <button>查看更多评论</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <div class="bottom">
+        <div class="top">
+            <ul>
+                <li style="width: 30%">登录</li>
+                <li style="width: 30%">注册</li>
+                <li style="width: 40%" class="to_top">返回顶部</li>
+            </ul>
+        </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/html"  id="tpl">
+    <a href="index.html">首页</a>>
+    <a href="productList.html?catrgoryId={{result[0].categoryId}}">{{result[0].category}}></a>
+    <a href="javascript:;">{{result[0].brandName}}</a>>
+</script>
+
+<script type="text/html" id="tpl2">
+    {{ each list as v i}}
+    <span>{{ v.productName }}</span>
+    {{#v.productImg}}
+    <div class="circle">收藏</div>
+    {{ /each }}
+</script>
+
+
+<script type="text/html" id="tpl3">
+    {{each list as v i}}
+    <li class="clearfix">
+        <p class="clearfix">
+            <span class="fl left">{{v.comName}}</span>
+            <span class="fr right">{{v.comTime}}</span>
+        <p class="buybuy">{{v.comFrom}}</p>
+        </p>
+        <p class="info">{{v.comContent}}</p>
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common/Tools.js"></script>
+<script src="./js/productdetail.js"></script>
+</body>
+</html>

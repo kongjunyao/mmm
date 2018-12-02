@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="back"><a href="javascript:history.go(-1);"> < </a></div>
+        <span>优惠券</span>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="pro_content">
+        <div class="title">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+        <div class="coupon_list">
+            <ul class="list_item">
+                <!-- 挖个坑 -->
+                <!--<li>-->
+                    <!--<a href="{{v.imgSrc}}">-->
+                        <!--<div class="pic">-->
+                            <!--<img src="images/ic_pp.png" alt="">-->
+                        <!--</div>-->
+                        <!--<div class="ino">-->
+                            <!--<div class="tit">-->
+                                <!--<p class="p1">{{v.couponProductName}}</p>-->
+                                <!--<p class="pri">{{v.couponProductPrice}}-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="time">{{v.couponProductTime}}</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="bottom">
+        <div class="top">
+            <ul>
+                <li style="width: 30%">登录</li>
+                <li style="width: 30%">注册</li>
+                <li style="width: 40%" class="to_top">返回顶部</li>
+            </ul>
+        </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script type="text/html" id="tpl">
+    {{each list as v i}}
+    <li>
+        <a href="{{v.imgSrc}}">
+            <div class="pic">
+                {{#v.couponProductImg}}
+            </div>
+            <div class="ino">
+                <div class="tit">
+                    <p class="p1">{{v.couponProductName}}</p>
+                    <p class="pri">{{v.couponProductPrice}}
+                    </p>
+                </div>
+                <div class="time">{{v.couponProductTime}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/couponproduct.js"></script>
+</body>
+</html>

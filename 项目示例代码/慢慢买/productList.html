@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/productList.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="header_logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--搜索区域-->
+    <section>
+        <form action="" class="search">
+            <input type="search" placeholder="请输入你想比价的产品" class="">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+
+
+   <section>
+         <div class="nav">
+             <div class="nav_left fl">
+                 <!-- 挖个坑 -->
+             </div>
+             <div class="right fr">
+                 <button>筛选</button>
+             </div>
+         </div>
+
+
+
+       <div class="content">
+            <!--挖个坑-->
+
+       </div>
+   </section>
+
+    <div class="page clearfix">
+        <button class="prev fl">上一页</button>
+        <button class="fl middle_x select"></button>
+        <button class="next fr">下一页</button>
+    </div>
+
+
+    <div class="bottom">
+        <div class="top">
+            <ul>
+                <li style="width: 30%">登录</li>
+                <li style="width: 30%">注册</li>
+                <li style="width: 40%" class="to_top">返回顶部</li>
+            </ul>
+        </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/html"  id="tpl">
+    <a href="index.html">首页</a>>
+    <a href="category.html">全部分类></a>
+    <a href="javascript:;">{{ result[0].category }}</a>>
+</script>
+
+<script type="text/html"  id="tpl2">
+    {{ each result as v i}}
+    <a href="productdetail.html?productId={{v.productId}}&brandName={{v.brandName}}&category={{category}}">
+        <div class="box clearfix">
+            <div class="left">
+                {{#v.productImg}}
+            </div>
+            <div class="right">
+                <div class="top">
+                    <p class="desc txt-cut">{{v.productName}}</p>
+                    <p class="price">{{v.productPrice}}</p>
+                </div>
+                <p class="info">
+                    <span>{{v.productQuote}}</span>
+                    <span>{{v.productCom}}</span>
+                </p>
+            </div>
+        </div>
+    </a>
+    {{ /each }}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/productList.js"></script>
+</body>
+</html>

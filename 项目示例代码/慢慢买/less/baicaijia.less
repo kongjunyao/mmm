@@ -1,0 +1,144 @@
+@import "inlanddiscount";
+.header{
+   line-height: 100rem/@base;
+   text-align: center;
+   color: #fff;
+   padding-left: 40rem/@base;
+   font-size: 30rem/@base;
+   .updown{
+     top:0;
+     right:0;
+     position: absolute;
+   }
+ }
+.back{
+  width: 45rem/@base;
+  height: 55rem/@base;
+  left: 0;
+  top: 0;
+  margin-left: 20rem/@base;
+  position: absolute;
+  color: #fff;
+  a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 50rem/@base;
+    color: #ccc;
+  }
+}
+.ul_wrap{
+  width: 100%;
+  background-color: #ccc;
+  height: 100%;
+}
+.ul_box{
+  height:100%;
+  .li_list{
+    height: 80rem/@base;
+    width: 1200rem/@base;
+    overflow: hidden;
+  }
+  li{
+    display: inline-block;
+    float: left;
+    font-size: 25rem/@base;
+    line-height:70rem/@base;
+    margin:  0 15rem/@base;
+  }
+  li.now{
+    a{
+      color: @mianColor;
+    }
+    border-bottom: 2rem/@base solid @mianColor;
+  }
+}
+.pro_list{
+  li{
+    position: relative;
+    .left{
+      float: left;
+      img{
+        width: 260rem/@base;
+        height: 260rem/@base;
+      }
+    }
+    .right{
+      position: relative;
+      .txt1{
+        font-size: 20rem/@base;
+        margin-top: 20rem/@base;
+        color: #000;
+      }
+      .txt2{
+        color: @mianColor;
+        font-size: 20rem/@base;
+        margin-top: 30rem/@base;
+        del{
+          margin-left: 50rem/@base;
+          font-size: 20rem/@base;
+          color:#ccc;
+        }
+      }
+      .bar{
+        i{
+          width: 100rem/@base;
+          height: 20rem/@base;
+          display: block;
+          background-color: @mianColor;
+          border-radius: 20rem/@base;
+          left: 300rem/@base;
+          top : 125rem/@base;
+          position: absolute;
+          border: 1rem/@base solid @mianColor;
+          span{
+            font-size: 10rem/@base;
+            line-height: 20rem/@base;
+            left: 50%;
+            position: absolute;
+          }
+          em{
+            color: @mianColor;
+          }
+        }
+        b{
+          left: 450rem/@base;
+          top : 125rem/@base;
+          position: absolute;
+          color: @mianColor;
+          font-size: 20rem/@base;
+        }
+      }
+      .bot{
+        a{
+          font-size: 20rem/@base;
+        }
+        a:nth-child(1){
+          display: block;
+          width: 216rem/@base;
+          height: 50rem/@base;
+          border: 1rem/@base dashed @mianColor;
+          line-height: 50rem/@base;
+          text-align: center;
+          color: @mianColor;
+          left: 300rem/@base;
+          bottom : 50rem/@base;
+          position: absolute;
+        }
+        a:nth-last-child(1){
+          display: block;
+          width: 100rem/@base;
+          height: 40rem/@base;
+          line-height: 40rem/@base;
+          background-color: @mianColor;
+          text-align: center;
+          border-radius: 20rem/@base;
+          right: 30rem/@base;
+          bottom : 50rem/@base;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+

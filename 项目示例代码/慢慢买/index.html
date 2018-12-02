@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="header_logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--搜索区域-->
+    <section>
+        <form action="" class="search">
+            <input type="search" placeholder="请输入你想比价的产品" class="">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--菜单区域-->
+    <div class="menu">
+        <ul class="clearfix">
+            <!--挖个坑-->
+        </ul>
+    </div>
+
+    <div class="list">
+        <div class="list_head">
+            <div class="list_head_left">超值折扣推荐</div>
+            <div class="list_head_right">
+                <img src="./images/more.png" alt="">
+            </div>
+        </div>
+        <div class="list_main">
+            <ul>
+                <!--挖个坑-->
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="mm_more">
+        <button>更多优惠信息》</button>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer_left">品牌排行</div>
+        <div class="footer_right">
+            <img src="./images/more.png" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="bottom">
+         <div class="top">
+             <ul>
+                 <li style="width: 30%">登录</li>
+                 <li style="width: 30%">注册</li>
+                 <li style="width: 40%" class="to_top">返回顶部</li>
+             </ul>
+         </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!--菜单栏模板引擎-->
+<script type="text/html" id="menuTpl">
+    {{ each result as v i}}
+    <li class="w25 fl {{ v.indexmenuId == 7 ? ' more ' : ' '}}">
+            <a href="{{v.titlehref}}">
+            {{#v.img}}
+           </a>
+    <p>{{v.name}}</p>
+    </li>
+    {{ /each }}
+</script>
+
+
+<script type="text/html" id="listTpl">
+    {{ each result as v i}}
+    <li>
+        <a href="">
+            <div class="picture">
+               {{ #v.productImg2 }}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{ v.productName }}
+                    <span>{{ v.productPinkage }}</span>
+                </div>
+                <div class="others">
+                    <span class="mall">{{ v.productFrom }} | {{ v.productTime}}</span>
+                    <span class="comment"><i class="icon-comment"></i>{{ v.productComCount }}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

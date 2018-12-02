@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/brand.css">
+    <title>Document</title>
+</head>
+<body>
+<div  class="container">
+    <!--头部区域-->
+    <div class="header">
+        <div class="header_logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="updown">
+            <a href="">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--搜索区域-->
+    <section>
+        <form action="" class="search">
+            <input type="search" placeholder="请输入你想比价的产品" class="">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+
+    <!-- 导航 -->
+    <nav>
+        <div class="left">
+            <!-- 挖个坑 -->
+            <a href="index.html">首页 ></a>
+            <a href="category.html">全部分类></a>
+            <!-- <a href="javascript:;">{{result[0].category}}</a>> -->
+        </div>
+    </nav>
+
+    <!-- hot -->
+    <div class="hot">
+        平板电视哪个牌子好
+    </div>
+
+    <!-- brand_list -->
+    <div class="brand_list">
+        <ul class="brand_list_wrap">
+            <!-- 挖个坑 -->
+        </ul>
+    </div>
+
+
+    <div class="choose hot">
+        平板电视产品销售排行
+    </div>
+
+    <!-- 销售排行 -->
+    <div class="product_list">
+        <ul class="product_list_wrap">
+            <!-- 挖个坑 -->
+
+        </ul>
+    </div>
+
+
+    <div class="choose hot">
+        平板电视最新评论
+    </div>
+
+    <!-- 评论 -->
+    <div class="comment_list">
+        <ul class="comment_list_wrap">
+            <!-- 挖个坑 -->
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="bottom">
+        <div class="top">
+            <ul>
+                <li style="width: 30%">登录</li>
+                <li style="width: 30%">注册</li>
+                <li class="to_top" style="width: 40%">返回顶部</li>
+            </ul>
+        </div>
+        <div class="down">
+            <p><span>手机APP下载</span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/html" id="tpl">
+    {{each list as v i}}
+        <li>
+            <a href="#" class="clearfix">
+                <div class="num fl {{i == 0 ? ' red ': i == 1 ? 'yellow ' : i == 2 ? 'green ' : ''}}">{{i+1}}</div>
+                <div class="info">
+                    <p class="p1">{{v.brandName}}</p>
+                    <p class="p2">{{v.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+</script>
+
+
+<script type="text/html" id="tpl2">
+    {{each list as v i}}
+    <li>
+        <a href="productdetail.html?productId={{v.productId}}&brandName={{v.brandName}}&category=电视" class="clearfix">
+            <div class="left fl">
+                {{#v.productImg}}
+            </div>
+            <div class="right">
+                <div class="tit">{{v.productName}}</div>
+                <div class="pri clearfix">
+                    <p class="p1 fl">{{v.productPrice}}</p>
+                    <p class="p2 fr"></p>
+                </div>
+                <div class="other">
+                    <span class="s1">{{v.productQuote}}</span>
+                    <span class="s2">{{v.productCom}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tpl3">
+    {{each list as v i}}
+    <li>
+        <a href="#">
+            <div class="top clearfix">
+                <div class="left fl">
+                </div>
+                <div class="right">
+                    <div class="tit">{{ v.comFrom }}</div>
+                </div>
+            </div>
+            <div class="com_box">
+                <div class="arrow_wrap">
+                </div>
+                <div class="name clearfix">
+                    <div class="left fl">
+                        <span>{{ v.comName }}：</span>
+                        <span class="star"></span>
+                    </div>
+                    <span class="fr time">{{ v.comTime }}</span>
+                </div>
+                <div class="com_com">
+                    {{ v.comContent }}
+                </div>
+            </div>
+
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/flexible.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/brand.js"></script>
+</body>
+</html>
